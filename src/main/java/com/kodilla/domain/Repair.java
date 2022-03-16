@@ -27,9 +27,9 @@ public class Repair {
     @NotNull
     private RepairStatus repairStatus;
 
-    private LocalDate startOfRepair;
+    private LocalDate admissionDate;
 
-    private LocalDate endOfRepair;
+    private LocalDate releaseDate;
 
     private String repairDescription;
 

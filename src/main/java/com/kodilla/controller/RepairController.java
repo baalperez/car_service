@@ -1,5 +1,6 @@
 package com.kodilla.controller;
 
+import com.kodilla.dto.ClientDto;
 import com.kodilla.dto.RepairDto;
 import com.kodilla.mapper.RepairMapper;
 import com.kodilla.sercive.RepairService;
@@ -28,5 +29,10 @@ public class RepairController {
     @RequestMapping(method = RequestMethod.POST, value = "/repairs", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void createRepair(@RequestBody RepairDto repairDto) {
         repairService.saveRepair(repairMapper.mapToRepair(repairDto));
+    }
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/repairs")
+    public RepairDto updateRepair(@RequestBody RepairDto repairDto) {
+        return repairMapper.mapToRepairDto(repairService.saveRepair(repairMapper.mapToRepair(repairDto)));
     }
 }

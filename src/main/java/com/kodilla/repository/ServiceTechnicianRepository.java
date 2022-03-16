@@ -14,5 +14,5 @@ public interface ServiceTechnicianRepository extends CrudRepository<ServiceTechn
     @Override
     List<ServiceTechnician> findAll();
 
-    ServiceTechnician findByLastname(String lastName);
+    ServiceTechnician findByName(String name);
 }

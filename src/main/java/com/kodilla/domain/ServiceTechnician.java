@@ -22,10 +22,7 @@ public class ServiceTechnician {
     private Long id;
 
     @NotNull
-    private String firstname;
-
-    @NotNull
-    private String lastname;
+    private String name;
 
     @NotNull
     private BigDecimal manHourRate;
@@ -38,10 +35,9 @@ public class ServiceTechnician {
     )
     private List<Repair> repairList = new ArrayList<>();
 
-    public ServiceTechnician(Long id, String firstname, String lastname, BigDecimal manHourRate) {
+    public ServiceTechnician(Long id, String name, BigDecimal manHourRate) {
         this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.name = name;
         this.manHourRate = manHourRate;
     }
 }

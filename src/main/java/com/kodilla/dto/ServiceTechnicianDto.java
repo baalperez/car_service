@@ -13,9 +13,7 @@ public class ServiceTechnicianDto {
 
     private Long id;
 
-    private String firstname;
-
-    private String lastname;
+    private String name;
 
     private BigDecimal manHourRate;
 }

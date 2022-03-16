@@ -18,9 +18,9 @@ public class RepairDto {
 
     private String repairStatus;
 
-    private LocalDate startOfRepair;
+    private LocalDate admissionDate;
 
-    private LocalDate endOfRepair;
+    private LocalDate releaseDate;
 
     private String repairDescription;
 

@@ -27,12 +27,12 @@ public class RepairMapper {
                 repairDto.getId(),
                 repairDto.getDamageDescription(),
                 RepairStatus.valueOf(repairDto.getRepairStatus()),
-                repairDto.getStartOfRepair(),
-                repairDto.getEndOfRepair(),
+                repairDto.getAdmissionDate(),
+                repairDto.getReleaseDate(),
                 repairDto.getRepairDescription(),
                 repairDto.getRepairTimeInManHours(),
                 carRepository.findByVin(repairDto.getCar()),
-                serviceTechnicianRepository.findByLastname(repairDto.getServiceTechnician()),
+                serviceTechnicianRepository.findByName(repairDto.getServiceTechnician()),
                 costRepository.findByTotalCost(repairDto.getCost())
         );
     }
@@ -42,12 +42,12 @@ public class RepairMapper {
                 repair.getId(),
                 repair.getDamageDescription(),
                 repair.getRepairStatus().name(),
-                repair.getStartOfRepair(),
-                repair.getEndOfRepair(),
+                repair.getAdmissionDate(),
+                repair.getReleaseDate(),
                 repair.getRepairDescription(),
                 repair.getRepairTimeInManHours(),
                 repair.getCar().getVin(),
-                repair.getServiceTechnician().getFirstname() + " " + repair.getServiceTechnician().getLastname(),
+                repair.getServiceTechnician().getName(),
                 repair.getCost().getTotalCost()
         );
     }

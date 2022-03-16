@@ -30,7 +30,7 @@ public class ServiceTechnicianService {
         serviceTechnicianRepository.deleteById(id);
     }
 
-    public ServiceTechnician findByLastName(String lastName) {
-        return serviceTechnicianRepository.findByLastname(lastName);
+    public ServiceTechnician findByName(String name) {
+        return serviceTechnicianRepository.findByName(name);
     }
 }

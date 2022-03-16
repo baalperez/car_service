@@ -13,8 +13,7 @@ public class ServiceTechnicianMapper {
     public ServiceTechnician mapToServiceTechnician(final ServiceTechnicianDto serviceTechnicianDto) {
         return new ServiceTechnician(
                 serviceTechnicianDto.getId(),
-                serviceTechnicianDto.getFirstname(),
-                serviceTechnicianDto.getLastname(),
+                serviceTechnicianDto.getName(),
                 serviceTechnicianDto.getManHourRate()
         );
     }
@@ -22,8 +21,7 @@ public class ServiceTechnicianMapper {
     public ServiceTechnicianDto mapToServiceTechnicianDto(final ServiceTechnician serviceTechnician) {
         return new ServiceTechnicianDto(
                 serviceTechnician.getId(),
-                serviceTechnician.getFirstname(),
-                serviceTechnician.getLastname(),
+                serviceTechnician.getName(),
                 serviceTechnician.getManHourRate()
         );
     }
